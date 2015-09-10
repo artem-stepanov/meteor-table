@@ -478,4 +478,192 @@
     }
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.meteor-table .responsive-table {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table {
+        font-size: .9em;
+    }
+}
+@media (min-width: 62em) {
+    .meteor-table .responsive-table {
+        font-size: 1em;
+    }
+}
+.meteor-table .responsive-table thead {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table thead {
+        position: relative;
+        clip: auto;
+        height: auto;
+        width: auto;
+        overflow: auto;
+    }
+}
+.meteor-table .responsive-table thead th {
+    /*background-color: #1d96b2;*/
+    /*border: 1px solid #1d96b2;*/
+    /*font-weight: normal;*/
+    text-align: center;
+    /*color: white;*/
+}
+/*.meteor-table .responsive-table thead th:first-of-type {*/
+/*text-align: left;*/
+/*}*/
+.meteor-table .responsive-table tbody,
+.meteor-table .responsive-table tr,
+.meteor-table .responsive-table th,
+.meteor-table .responsive-table td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tr {
+        display: table-row;
+    }
+}
+.meteor-table .responsive-table th,
+.meteor-table .responsive-table td {
+    padding: .5em;
+    vertical-align: middle;
+}
+@media (min-width: 30em) {
+    .meteor-table .responsive-table th,
+    .meteor-table .responsive-table td {
+        padding: .75em .5em;
+    }
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table th,
+    .meteor-table .responsive-table td {
+        display: table-cell;
+        padding: .5em;
+    }
+}
+@media (min-width: 62em) {
+    .meteor-table .responsive-table th,
+    .meteor-table .responsive-table td {
+        padding: .75em .5em;
+    }
+}
+@media (min-width: 75em) {
+    .meteor-table .responsive-table th,
+    .meteor-table .responsive-table td {
+        padding: .75em;
+    }
+}
+.meteor-table .responsive-table caption {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table caption {
+        font-size: 1.5em;
+    }
+}
+.meteor-table .responsive-table tfoot {
+    font-size: .8em;
+    font-style: italic;
+}
+@media (min-width: 62em) {
+    .meteor-table .responsive-table tfoot {
+        font-size: .9em;
+    }
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody {
+        display: table-row-group;
+    }
+}
+.meteor-table .responsive-table tbody tr {
+    margin-bottom: 1em;
+    border-top: 1px solid #cccccc;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody tr {
+        display: table-row;
+        border: none;
+    }
+}
+.meteor-table .responsive-table tbody tr:last-of-type {
+    margin-bottom: 0;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody tr:nth-of-type(even) {
+        /*background-color: rgba(94, 93, 82, 0.1);*/
+    }
+}
+.meteor-table .responsive-table tbody th[scope="row"] {
+    /*background-color: #1d96b2;*/
+    color: white;
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody th[scope="row"] {
+        background-color: transparent;
+        /*color: #5e5d52;*/
+        text-align: left;
+    }
+}
+.meteor-table .responsive-table tbody td {
+    text-align: right;
+}
+@media (min-width: 30em) {
+    .meteor-table .responsive-table tbody td {
+        /*border-bottom: 1px solid #1d96b2;*/
+    }
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody td {
+        text-align: center;
+    }
+}
+.meteor-table .responsive-table tbody td[data-type=currency] {
+    text-align: right;
+}
+.meteor-table .responsive-table tbody td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: .8em;
+    /*color: rgba(94, 93, 82, 0.75);*/
+}
+@media (min-width: 30em) {
+    .meteor-table .responsive-table tbody td[data-title]:before {
+        font-size: .9em;
+    }
+}
+@media (min-width: 48em) {
+    .meteor-table .responsive-table tbody td[data-title]:before {
+        content: none;
+    }
+}
+
+
+
 
