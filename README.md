@@ -1,3 +1,3 @@
-# A rich reactive table
+# A rich reactive table for Meteor
 
 description in developing

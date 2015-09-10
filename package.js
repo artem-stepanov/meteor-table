@@ -1,8 +1,8 @@
 Package.describe({
   name: 'akora:meteor-table',
   version: '0.0.1',
-  summary: 'A rich reactive table',
-  git: '',
+  summary: 'A rich reactive table for Meteor',
+  git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
 });
 
@@ -17,15 +17,15 @@ Package.onUse(function(api) {
 
   api.use("twbs:bootstrap@3.3.5", 'client');
   api.use("fortawesome:fontawesome@4.2.0", 'client', {weak: true});
-  api.use("netanelgilad:excel", "server");
-  api.use("netanelgilad:node-uuid", "server");
-  api.use("netanelgilad:mkdirp", "server");
-  api.use("vsivsi:file-collection", ["server", "client"]);
-  api.use("tmeasday:publish-counts", ["server", "client"]);
-  api.use("natestrauser:select2", "client");
-  api.use("rajit:bootstrap3-datepicker", "client");
-  api.use("momentjs:moment", ["server", "client"]);
-  api.use("suxez:jquery-serialize-object", "client");
+  api.use("netanelgilad:excel@0.2.4", "server");
+  api.use("netanelgilad:node-uuid@1.0.2", "server");
+  api.use("netanelgilad:mkdirp@0.0.1", "server");
+  api.use("vsivsi:file-collection@1.2.0", ["server", "client"]);
+  api.use("tmeasday:publish-counts@0.7.1", ["server", "client"]);
+  api.use("natestrauser:select2@4.0.0", "client");
+  api.use("rajit:bootstrap3-datepicker@1.4.1", "client");
+  api.use("momentjs:moment@2.10.6", ["server", "client"]);
+  api.use("suxez:jquery-serialize-object@1.0.0", "client");
 
   api.addFiles('lib/MeteorTable.js',  ['client', 'server']);
   api.addFiles('lib/MeteorTable.css',  'client');
