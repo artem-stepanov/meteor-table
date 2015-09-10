@@ -2,9 +2,7 @@
 
     <div class="container meteor-table">
 
-
         <div class="columns-settings" style="margin-bottom: 1em;{{#if firstLoading}}display: none;{{/if}}">
-
 
             <div class="row">
                 <div class="col-md-6">
@@ -39,7 +37,7 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-xs-3" style="padding-left: 0;">
-                                                <a class="btn btn-primary meteor-table-submit">Search</a>
+                                                <a class="btn btn-primary meteor-table-submit">{{getLabel "search"}}</a>
                                             </div>
                                             <div class="col-xs-3">
                                                 <div id="floatingBarsG"
@@ -69,7 +67,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
                     <button class="btn btn-success excel-download"><i
-                            class="fa fa-file-excel-o half-right-margin"></i> {{i18n "excelDownload"}}</button>
+                            class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}</button>
                 </div>
 
                 <div class="mobile-sort">
@@ -100,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col-xs-3 col-sm-2 col-md-1">
-                    <span class="btn btn-default hidden-column-button" data-toggle="popover">Columns</span>
+                    <span class="btn btn-default hidden-column-button" data-toggle="popover">{{getLabel "columns"}}</span>
 
                     <div style="display: none;" class="hidden-column-body">
                         <ul class="list-columns">
@@ -190,13 +188,13 @@
 
                 {{#unless totalCountRows}}
                     <div class="col-md-12 tableDataCount" style="text-align: center; font-weight: bold;">
-                        No data available
+                        {{getLabel "empty"}}
                     </div>
                 {{/unless}}
 
                 <div class="col-md-3 tableDataCount">
                     {{#if totalCountRows}}
-                        <p>{{getCountTitle}}: <strong>{{totalCountRows}}</strong></p>
+                        <p>{{getLabel "count"}}: <strong>{{totalCountRows}}</strong></p>
                     {{/if}}
                 </div>
                 <div class="col-md-6 text-center" style="margin-left: -35px;">
