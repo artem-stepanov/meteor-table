@@ -1,0 +1,264 @@
+<template name="meteorTable">
+
+    <div class="container meteor-table">
+
+
+        <div class="columns-settings" style="margin-bottom: 1em;{{#if firstLoading}}display: none;{{/if}}">
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <form class="form-horizontal meteor-table-filters" onsubmit="return false;">
+
+                        {{#if issetFilters}}
+                            {{#each getFilters }}
+                                <div class="form-group">
+                                    <label for="{{ name }}" class="col-sm-4 control-label">{{ title }}</label>
+
+                                    <div class="col-sm-8">
+                                        {{ getInput }}
+                                    </div>
+                                </div>
+                            {{/each}}
+                        {{/if}}
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <form class="form-horizontal meteor-table-filters" onsubmit="return false;">
+
+                        {{#if issetFilters}}
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-3" style="padding-left: 0;">
+                                                <a class="btn btn-primary meteor-table-submit">Search</a>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div id="floatingBarsG"
+                                                     style="{{#if hideLoading 'search'}}visibility: hidden;{{/if}}margin: 7px 0 0 0;">
+                                                    <div class="blockG" id="rotateG_01"></div>
+                                                    <div class="blockG" id="rotateG_02"></div>
+                                                    <div class="blockG" id="rotateG_03"></div>
+                                                    <div class="blockG" id="rotateG_04"></div>
+                                                    <div class="blockG" id="rotateG_05"></div>
+                                                    <div class="blockG" id="rotateG_06"></div>
+                                                    <div class="blockG" id="rotateG_07"></div>
+                                                    <div class="blockG" id="rotateG_08"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
+
+                    </form>
+
+                </div>
+
+                <div class="unless-mobile-sort">
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
+                    <button class="btn btn-success excel-download"><i
+                            class="fa fa-file-excel-o half-right-margin"></i> {{i18n "excelDownload"}}</button>
+                </div>
+
+                <div class="mobile-sort">
+                    <div class="col-xs-8 col-md-1">
+
+                        <ul class="nav nav-pills">
+                            {{#if getSortOrder}}
+                                <li class="change-sort-order"><a class="disable" href="#">
+                                    {{ getSort }}
+                                    <i class="fa {{getSortOrder}}"></i>
+                                </a></li>
+                            {{/if}}
+
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li data-column-name=""><a href="#">&mdash;</a></li>
+                                    {{#each getColumns}}
+                                        <li data-column-name="{{this}}"><a href="#">{{getTitle this}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-2 col-md-1">
+                    <span class="btn btn-default hidden-column-button" data-toggle="popover">Columns</span>
+
+                    <div style="display: none;" class="hidden-column-body">
+                        <ul class="list-columns">
+                            {{#each getColumns}}
+                                <li data-column-name="{{this}}">
+                                    <nobr>
+                                        <i class="fa fa-bars sortable-handle"></i>
+                                        <label>
+                                            <input type="checkbox" data-column-name="{{this}}">
+                                            <span>{{getTitle this}}</span>
+                                        </label>
+                                    </nobr>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-1 col-sm-1">
+                    <div id="floatingBarsG"
+                         style="{{#if hideLoading 'sort'}}visibility: hidden;{{/if}}margin: 7px 0 0 0;">
+                        <div class="blockG" id="rotateG_01"></div>
+                        <div class="blockG" id="rotateG_02"></div>
+                        <div class="blockG" id="rotateG_03"></div>
+                        <div class="blockG" id="rotateG_04"></div>
+                        <div class="blockG" id="rotateG_05"></div>
+                        <div class="blockG" id="rotateG_06"></div>
+                        <div class="blockG" id="rotateG_07"></div>
+                        <div class="blockG" id="rotateG_08"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        {{#if firstLoading}}
+
+            <div class="cssload-container">
+                <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+            </div>
+
+        {{else}}
+
+
+            <div class="row meteor-table-table">
+                <div class="col-sm-12">
+
+                    <div class="loading-opacity {{#if tableReady}}display-none{{/if}}"></div>
+
+                    <table class="table table-striped table-hover responsive-table">
+                        {{#if totalCountRows}}
+                            <thead>
+                            <tr>
+                                {{#each getColumns}}
+                                    {{#if isShownColumn this}}
+                                        <th scope="col" data-column-name="{{this}}">
+                                            {{getTitle this}}
+                                            {{#if isSort this}}
+                                                {{#if getSortOrder}}
+                                                    <i class="fa {{getSortOrder}}"></i>
+                                                {{/if}}
+                                            {{/if}}
+                                        </th>
+                                    {{/if}}
+                                {{/each}}
+                            </tr>
+                            </thead>
+                        {{/if}}
+                        <tbody>
+                        {{#each rowsData }}
+                            <tr>
+                                {{#each getColumns}}
+                                    {{#if isShownColumn this}}
+                                        <td data-title="{{getTitle this}}">
+                                            {{getValue this}}&nbsp;
+                                        </td>
+                                    {{/if}}
+                                {{/each}}
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="row">
+
+                {{#unless totalCountRows}}
+                    <div class="col-md-12 tableDataCount" style="text-align: center; font-weight: bold;">
+                        No data available
+                    </div>
+                {{/unless}}
+
+                <div class="col-md-3 tableDataCount">
+                    {{#if totalCountRows}}
+                        <p>{{getCountTitle}}: <strong>{{totalCountRows}}</strong></p>
+                    {{/if}}
+                </div>
+                <div class="col-md-6 text-center" style="margin-left: -35px;">
+
+                    <div id="floatingBarsG" style="{{#if hideLoading 'page'}}visibility: hidden;{{/if}}">
+                        <div class="blockG" id="rotateG_01"></div>
+                        <div class="blockG" id="rotateG_02"></div>
+                        <div class="blockG" id="rotateG_03"></div>
+                        <div class="blockG" id="rotateG_04"></div>
+                        <div class="blockG" id="rotateG_05"></div>
+                        <div class="blockG" id="rotateG_06"></div>
+                        <div class="blockG" id="rotateG_07"></div>
+                        <div class="blockG" id="rotateG_08"></div>
+                    </div>
+
+                    <nav style="display: inline-block;">
+                        <ul class="pagination">
+                            {{#each getPaginationArray}}
+                                <li class="{{#if active }}active{{/if}}{{#unless page }}disabled{{/unless}}">
+                                    <a href="#" data-page="{{ page }}">{{{ text }}}</a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 rowPerPageDiv">
+                    {{#if showRowPerPage}}
+
+                        <div id="floatingBarsG"
+                             style="{{#if hideLoading 'rowPerPage'}}visibility: hidden;{{/if}} margin: 28px 20px;">
+                            <div class="blockG" id="rotateG_01"></div>
+                            <div class="blockG" id="rotateG_02"></div>
+                            <div class="blockG" id="rotateG_03"></div>
+                            <div class="blockG" id="rotateG_04"></div>
+                            <div class="blockG" id="rotateG_05"></div>
+                            <div class="blockG" id="rotateG_06"></div>
+                            <div class="blockG" id="rotateG_07"></div>
+                            <div class="blockG" id="rotateG_08"></div>
+                        </div>
+
+                        <div class="btn-group rowPerPage" role="group"
+                             style="display: inline-block; margin: 20px 0; padding: 0; vertical-align: top;">
+                            <button type="button" data-row="10"
+                                    class="btn {{# if rowPerPage 10}}btn-warning{{else}}btn-default{{/if}}">10
+                            </button>
+                            <button type="button" data-row="20"
+                                    class="btn {{# if rowPerPage 20}}btn-warning{{else}}btn-default{{/if}}">20
+                            </button>
+                            <button type="button" data-row="50"
+                                    class="btn {{# if rowPerPage 50}}btn-warning{{else}}btn-default{{/if}}">50
+                            </button>
+                            <button type="button" data-row="100"
+                                    class="btn {{# if rowPerPage 100}}btn-warning{{else}}btn-default{{/if}}">100
+                            </button>
+                        </div>
+                    {{/if}}
+                </div>
+
+            </div>
+
+        {{/if}}
+
+    </div>
+
+</template>

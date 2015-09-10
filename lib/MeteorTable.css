@@ -1,0 +1,482 @@
+.meteor-table {
+
+}
+
+.meteor-table .meteor-table-select2 {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.meteor-table .input-daterange {
+    padding-top: 2px;
+}
+
+.meteor-table .meteor-table-table table tbody td,
+.meteor-table .meteor-table-table table thead th {
+    cursor: pointer;
+}
+
+
+.meteor-table .loading-opacity {
+    opacity: 0.5;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    display: table;
+}
+
+.meteor-table .display-none {
+    display: none;
+}
+
+.meteor-table .columns-settings ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.meteor-table .columns-settings ul li{
+    margin: 0;
+    padding: 0;
+}
+
+.meteor-table .columns-settings .list-columns li i{
+    margin-right: 10px;
+    cursor: move;
+}
+.meteor-table .columns-settings .list-columns li label input{
+    margin-right: 5px;
+}
+.meteor-table .columns-settings .list-columns li label span{
+}
+
+.meteor-table .rowPerPageDiv {
+    margin-left: -35px;
+    text-align: center;
+}
+@media (min-width: 48em) {
+    .meteor-table .rowPerPageDiv {
+        margin-left: 0;
+        text-align: right;
+    }
+}
+
+.meteor-table .tableDataCount {
+    padding: 2em 0 0 1em;
+    text-align: center;
+}
+@media (min-width: 48em) {
+    .meteor-table .tableDataCount {
+        text-align: left;
+    }
+}
+
+.meteor-table .mobile-sort {
+    display: block;
+}
+@media (min-width: 48em) {
+    .meteor-table .mobile-sort {
+        display: none;
+    }
+}
+.meteor-table .mobile-sort li a {
+     color: #666666;
+ }
+.meteor-table .unless-mobile-sort {
+    display: none;
+}
+@media (min-width: 48em) {
+    .meteor-table .unless-mobile-sort {
+        display: block;
+    }
+}
+
+
+
+.meteor-table .columns-settings > div {
+    margin-top: 1em;
+}
+@media (min-width: 48em) {
+    .meteor-table .columns-settings > div {
+        margin-top: 0;
+    }
+}
+
+.meteor-table .excel-link {
+    padding-bottom: 15px;
+}
+@media (min-width: 48em) {
+    .meteor-table .excel-link {
+        padding-bottom: 0;
+    }
+}
+
+
+
+.meteor-table #floatingBarsG{
+    position:relative;
+    width:15px;
+    height:19px;
+    margin: 28px 20px 28px 0;
+    padding: 0;
+    display: inline-block;
+    /*padding: 0 0 40px 0;*/
+}
+
+.meteor-table .blockG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:2px;
+    height:6px;
+    border-radius:2px 2px 0 0;
+    -o-border-radius:2px 2px 0 0;
+    -ms-border-radius:2px 2px 0 0;
+    -webkit-border-radius:2px 2px 0 0;
+    -moz-border-radius:2px 2px 0 0;
+    transform:scale(0.4);
+    -o-transform:scale(0.4);
+    -ms-transform:scale(0.4);
+    -webkit-transform:scale(0.4);
+    -moz-transform:scale(0.4);
+    animation-name:fadeG;
+    -o-animation-name:fadeG;
+    -ms-animation-name:fadeG;
+    -webkit-animation-name:fadeG;
+    -moz-animation-name:fadeG;
+    animation-duration:0.522s;
+    -o-animation-duration:0.522s;
+    -ms-animation-duration:0.522s;
+    -webkit-animation-duration:0.522s;
+    -moz-animation-duration:0.522s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+.meteor-table #rotateG_01{
+    left:0;
+    top:7px;
+    animation-delay:0.1995s;
+    -o-animation-delay:0.1995s;
+    -ms-animation-delay:0.1995s;
+    -webkit-animation-delay:0.1995s;
+    -moz-animation-delay:0.1995s;
+    transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+}
+
+.meteor-table #rotateG_02{
+    left:2px;
+    top:2px;
+    animation-delay:0.256s;
+    -o-animation-delay:0.256s;
+    -ms-animation-delay:0.256s;
+    -webkit-animation-delay:0.256s;
+    -moz-animation-delay:0.256s;
+    transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+}
+
+.meteor-table #rotateG_03{
+    left:6px;
+    top:1px;
+    animation-delay:0.3225s;
+    -o-animation-delay:0.3225s;
+    -ms-animation-delay:0.3225s;
+    -webkit-animation-delay:0.3225s;
+    -moz-animation-delay:0.3225s;
+    transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+}
+
+.meteor-table #rotateG_04{
+    right:2px;
+    top:2px;
+    animation-delay:0.389s;
+    -o-animation-delay:0.389s;
+    -ms-animation-delay:0.389s;
+    -webkit-animation-delay:0.389s;
+    -moz-animation-delay:0.389s;
+    transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+}
+
+.meteor-table #rotateG_05{
+    right:0;
+    top:7px;
+    animation-delay:0.4555s;
+    -o-animation-delay:0.4555s;
+    -ms-animation-delay:0.4555s;
+    -webkit-animation-delay:0.4555s;
+    -moz-animation-delay:0.4555s;
+    transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+}
+
+.meteor-table #rotateG_06{
+    right:2px;
+    bottom:2px;
+    animation-delay:0.522s;
+    -o-animation-delay:0.522s;
+    -ms-animation-delay:0.522s;
+    -webkit-animation-delay:0.522s;
+    -moz-animation-delay:0.522s;
+    transform:rotate(135deg);
+    -o-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+}
+
+.meteor-table #rotateG_07{
+    bottom:0;
+    left:6px;
+    animation-delay:0.5885s;
+    -o-animation-delay:0.5885s;
+    -ms-animation-delay:0.5885s;
+    -webkit-animation-delay:0.5885s;
+    -moz-animation-delay:0.5885s;
+    transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+}
+
+.meteor-table #rotateG_08{
+    left:2px;
+    bottom:2px;
+    animation-delay:0.645s;
+    -o-animation-delay:0.645s;
+    -ms-animation-delay:0.645s;
+    -webkit-animation-delay:0.645s;
+    -moz-animation-delay:0.645s;
+    transform:rotate(-135deg);
+    -o-transform:rotate(-135deg);
+    -ms-transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+    -moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+    0%{
+        background-color:rgb(102,102,102);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes fadeG{
+    0%{
+        background-color:rgb(102,102,102);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes fadeG{
+    0%{
+        background-color:rgb(102,102,102);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes fadeG{
+    0%{
+        background-color:rgb(102,102,102);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes fadeG{
+    0%{
+        background-color:rgb(102,102,102);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+
+.meteor-table .cssload-container{
+    display: block;
+    margin:150px auto 150px;
+    width:100px;
+}
+
+.meteor-table .cssload-loading i{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background: rgb(112,112,112);
+}
+.meteor-table .cssload-loading i:first-child{
+    opacity: 0;
+    animation:cssload-loading-ani2 0.475s linear infinite;
+    -o-animation:cssload-loading-ani2 0.475s linear infinite;
+    -ms-animation:cssload-loading-ani2 0.475s linear infinite;
+    -webkit-animation:cssload-loading-ani2 0.475s linear infinite;
+    -moz-animation:cssload-loading-ani2 0.475s linear infinite;
+    transform:translate(-20px);
+    -o-transform:translate(-20px);
+    -ms-transform:translate(-20px);
+    -webkit-transform:translate(-20px);
+    -moz-transform:translate(-20px);
+}
+.meteor-table .cssload-loading i:nth-child(2),
+.meteor-table .cssload-loading i:nth-child(3){
+    animation:cssload-loading-ani3 0.475s linear infinite;
+    -o-animation:cssload-loading-ani3 0.475s linear infinite;
+    -ms-animation:cssload-loading-ani3 0.475s linear infinite;
+    -webkit-animation:cssload-loading-ani3 0.475s linear infinite;
+    -moz-animation:cssload-loading-ani3 0.475s linear infinite;
+}
+.meteor-table .cssload-loading i:last-child{
+    animation:cssload-loading-ani1 0.475s linear infinite;
+    -o-animation:cssload-loading-ani1 0.475s linear infinite;
+    -ms-animation:cssload-loading-ani1 0.475s linear infinite;
+    -webkit-animation:cssload-loading-ani1 0.475s linear infinite;
+    -moz-animation:cssload-loading-ani1 0.475s linear infinite;
+}
+
+
+
+
+@keyframes cssload-loading-ani1{
+    100%{
+        transform:translate(40px);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes cssload-loading-ani1{
+    100%{
+        -o-transform:translate(40px);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes cssload-loading-ani1{
+    100%{
+        -ms-transform:translate(40px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani1{
+    100%{
+        -webkit-transform:translate(40px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes cssload-loading-ani1{
+    100%{
+        -moz-transform:translate(40px);
+        opacity: 0;
+    }
+}
+
+@keyframes cssload-loading-ani2{
+    100%{
+        transform:translate(20px);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes cssload-loading-ani2{
+    100%{
+        -o-transform:translate(20px);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes cssload-loading-ani2{
+    100%{
+        -ms-transform:translate(20px);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani2{
+    100%{
+        -webkit-transform:translate(20px);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes cssload-loading-ani2{
+    100%{
+        -moz-transform:translate(20px);
+        opacity: 1;
+    }
+}
+
+@keyframes cssload-loading-ani3{
+    100%{
+        transform:translate(20px);
+    }
+}
+
+@-o-keyframes cssload-loading-ani3{
+    100%{
+        -o-transform:translate(20px);
+    }
+}
+
+@-ms-keyframes cssload-loading-ani3{
+    100%{
+        -ms-transform:translate(20px);
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani3{
+    100%{
+        -webkit-transform:translate(20px);
+    }
+}
+
+@-moz-keyframes cssload-loading-ani3{
+    100%{
+        -moz-transform:translate(20px);
+    }
+}
+
+
