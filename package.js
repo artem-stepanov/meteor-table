@@ -13,7 +13,7 @@ Package.onUse(function(api) {
   api.use('underscore', 'client');
   api.use('spacebars', 'client');
   api.use('reactive-var@1.0.3', 'client');
-  //api.use("anti:i18n@0.4.3", 'client');
+  api.use("anti:i18n@0.4.3", 'client');
   api.use("mongo@1.0.8", ["server", "client"]);
 
   api.use("twbs:bootstrap@3.3.5", 'client');
