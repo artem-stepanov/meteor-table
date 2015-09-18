@@ -35,10 +35,7 @@ Package.onUse(function(api) {
 
   api.export('MeteorTable', ['client', 'server']);
   api.export('MeteorTableField', ['client', 'server']);
-  api.export('METEOR_TABLE_FIELD_TYPE_STRING', ['client', 'server']);
-  api.export('METEOR_TABLE_FIELD_TYPE_TEXT', ['client', 'server']);
-  api.export('METEOR_TABLE_FIELD_TYPE_DATE', ['client', 'server']);
-  api.export('METEOR_TABLE_FIELD_TYPE_SELECT', ['client', 'server']);
+  api.export('MeteorTableParams', ['client', 'server']);
 });
 
 //Package.onTest(function(api) {
