@@ -16,6 +16,11 @@
 }
 
 
+.meteor-table .half-right-margin {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
 .meteor-table .loading-opacity {
     opacity: 0.5;
     background-color: #ffffff;
