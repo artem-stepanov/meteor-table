@@ -1,6 +1,6 @@
 Package.describe({
   name: 'akora:meteor-table',
-  version: '0.0.14',
+  version: '0.0.15',
   summary: 'A rich reactive table for Meteor',
   git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
@@ -27,6 +27,7 @@ Package.onUse(function(api) {
   api.use("rajit:bootstrap3-datepicker@1.4.1", "client");
   api.use("momentjs:moment@2.10.6", ["server", "client"]);
   api.use("suxez:jquery-serialize-object@1.0.0", "client");
+  api.use("awatson1978:browser-detection@1.0.3", "client");
 
   api.addFiles(['lib/MeteorTable.html', 'lib/MeteorTable.css'],  'client');
   api.addFiles('lib/MeteorTable.js',  ['client', 'server']);
