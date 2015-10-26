@@ -176,7 +176,7 @@
                         <td data-title="{{getTitle}}">
                             {{#if isViewTpl}}
                             {{#with ..}}
-                                {{> ../tplView}}
+                            {{> Template.dynamic template=../tplView}}
                             {{/with}}
                             {{else}}
                             {{getValue}}
