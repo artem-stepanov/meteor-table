@@ -11,7 +11,7 @@
 }
 
 .meteor-table .meteor-table-table table tbody td,
-.meteor-table .meteor-table-table table thead th {
+.meteor-table .meteor-table-table table thead th:not(.no-sort) {
     cursor: pointer;
 }
 

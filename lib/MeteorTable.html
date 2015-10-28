@@ -156,7 +156,7 @@
                     <tr>
                         {{#each getColumns}}
                         {{#if isShownColumn}}
-                        <th scope="col" data-column-name="{{name}}">
+                        <th scope="col" data-column-name="{{name}}" class="{{getNoSort}}">
                             {{getTitle}}
                             {{#if isSort}}
                             {{#if getSortOrder}}
