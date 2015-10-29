@@ -62,14 +62,19 @@
 
                 </div>
 
+                {{#if getColumns}}
+
                 <div class="unless-mobile-sort">
                     <div class="col-md-1"></div>
                 </div>
+
+                {{#unless noExcel}}
                 <div class="col-xs-12 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
                     <button class="btn btn-success excel-download"><i
                             class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
                     </button>
                 </div>
+                {{/unless}}
 
                 <div class="mobile-sort">
                     <div class="col-xs-8 col-md-1">
@@ -118,6 +123,7 @@
                         </ul>
                     </div>
                 </div>
+                {{/if}}
                 <div class="col-xs-1 col-sm-1">
                     <div id="floatingBarsG"
                          style="{{#if hideLoading 'sort'}}visibility: hidden;{{/if}}margin: 7px 0 0 0;">
