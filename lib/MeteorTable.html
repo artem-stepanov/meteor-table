@@ -160,6 +160,15 @@
                 <table class="table table-striped table-hover responsive-table">
                     <thead>
                     <tr>
+                        {{#if getCheckboxes}}
+                        <th class="no-sort" scope="col">
+                            <div class="checkbox checkbox-primary">
+                                <input class="styled checkboxes" type="checkbox">
+                                <label>&nbsp;</label>
+                            </div>
+                        </th>
+                        {{/if}}
+
                         {{#each getColumns}}
                         {{#if isShownColumn}}
                         <th scope="col" data-column-name="{{name}}" class="{{getNoSort}}">
@@ -177,6 +186,17 @@
                     <tbody>
                     {{#each rowsData }}
                     <tr>
+                        {{#with ..}}
+                        {{#if getCheckboxes}}
+                        <td>
+                            <div class="checkbox checkbox-primary">
+                                <input class="styled checkboxes" type="checkbox" data-id="{{../_id}}">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                        {{/if}}
+                        {{/with}}
+
                         {{#each getColumns}}
                         {{#if isShownColumn}}
                         <td data-title="{{getTitle}}">
@@ -269,6 +289,27 @@
 
         </div>
 
+        {{/if}}
+
+        {{#if getCheckboxes}}
+        {{#if isCheckboxesChecked}}
+        <nav class="navbar navbar-checkboxes-buttons navbar-fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2" style="padding-top: 7px;">
+                        Total checked: <strong>{{ getCountCheckboxesChecked }}</strong>
+                    </div>
+                    {{#each getCheckboxes}}
+                    <div class="col-sm-1">
+                        <button class="{{btnClass}}{{#unless btnClass}}btn btn-default{{/unless}}" data-func-name="{{name}}">
+                            {{title}}
+                        </button>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </nav>
+        {{/if}}
         {{/if}}
 
     </div>

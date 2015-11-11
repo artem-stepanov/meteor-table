@@ -15,7 +15,6 @@
     cursor: pointer;
 }
 
-
 .meteor-table .half-right-margin {
     display: inline-block;
     margin-right: 0.5em;
@@ -34,31 +33,38 @@
     display: none;
 }
 
-.meteor-table .columns-settings ul{
+.meteor-table .display-none-important {
+    display: none !important;
+}
+
+.meteor-table .columns-settings ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.meteor-table .columns-settings ul li{
+.meteor-table .columns-settings ul li {
     margin: 0;
     padding: 0;
 }
 
-.meteor-table .columns-settings .list-columns li i{
+.meteor-table .columns-settings .list-columns li i {
     margin-right: 10px;
     cursor: move;
 }
-.meteor-table .columns-settings .list-columns li label input{
+
+.meteor-table .columns-settings .list-columns li label input {
     margin-right: 5px;
 }
-.meteor-table .columns-settings .list-columns li label span{
+
+.meteor-table .columns-settings .list-columns li label span {
 }
 
 .meteor-table .rowPerPageDiv {
     margin-left: -35px;
     text-align: center;
 }
+
 @media (min-width: 48em) {
     .meteor-table .rowPerPageDiv {
         margin-left: 0;
@@ -70,6 +76,7 @@
     padding: 2em 0 0 1em;
     text-align: center;
 }
+
 @media (min-width: 48em) {
     .meteor-table .tableDataCount {
         text-align: left;
@@ -79,28 +86,31 @@
 .meteor-table .mobile-sort {
     display: block;
 }
+
 @media (min-width: 48em) {
     .meteor-table .mobile-sort {
         display: none;
     }
 }
+
 .meteor-table .mobile-sort li a {
-     color: #666666;
- }
+    color: #666666;
+}
+
 .meteor-table .unless-mobile-sort {
     display: none;
 }
+
 @media (min-width: 48em) {
     .meteor-table .unless-mobile-sort {
         display: block;
     }
 }
 
-
-
 .meteor-table .columns-settings > div {
     margin-top: 1em;
 }
+
 @media (min-width: 48em) {
     .meteor-table .columns-settings > div {
         margin-top: 0;
@@ -110,376 +120,385 @@
 .meteor-table .excel-link {
     padding-bottom: 15px;
 }
+
 @media (min-width: 48em) {
     .meteor-table .excel-link {
         padding-bottom: 0;
     }
 }
 
+.checkboxes-field-enabled {
+    padding-bottom: 55px;
+}
 
+.navbar-checkboxes-buttons {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    padding: 10px 0;
+}
 
-.meteor-table #floatingBarsG{
-    position:relative;
-    width:15px;
-    height:19px;
+.navbar-checkboxes-buttons {
+}
+
+.meteor-table #floatingBarsG {
+    position: relative;
+    width: 15px;
+    height: 19px;
     margin: 28px 20px 28px 0;
     padding: 0;
     display: inline-block;
     /*padding: 0 0 40px 0;*/
 }
 
-.meteor-table .blockG{
-    position:absolute;
-    background-color:rgb(255,255,255);
-    width:2px;
-    height:6px;
-    border-radius:2px 2px 0 0;
-    -o-border-radius:2px 2px 0 0;
-    -ms-border-radius:2px 2px 0 0;
-    -webkit-border-radius:2px 2px 0 0;
-    -moz-border-radius:2px 2px 0 0;
-    transform:scale(0.4);
-    -o-transform:scale(0.4);
-    -ms-transform:scale(0.4);
-    -webkit-transform:scale(0.4);
-    -moz-transform:scale(0.4);
-    animation-name:fadeG;
-    -o-animation-name:fadeG;
-    -ms-animation-name:fadeG;
-    -webkit-animation-name:fadeG;
-    -moz-animation-name:fadeG;
-    animation-duration:0.522s;
-    -o-animation-duration:0.522s;
-    -ms-animation-duration:0.522s;
-    -webkit-animation-duration:0.522s;
-    -moz-animation-duration:0.522s;
-    animation-iteration-count:infinite;
-    -o-animation-iteration-count:infinite;
-    -ms-animation-iteration-count:infinite;
-    -webkit-animation-iteration-count:infinite;
-    -moz-animation-iteration-count:infinite;
-    animation-direction:normal;
-    -o-animation-direction:normal;
-    -ms-animation-direction:normal;
-    -webkit-animation-direction:normal;
-    -moz-animation-direction:normal;
+.meteor-table .blockG {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+    height: 6px;
+    border-radius: 2px 2px 0 0;
+    -o-border-radius: 2px 2px 0 0;
+    -ms-border-radius: 2px 2px 0 0;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    animation-name: fadeG;
+    -o-animation-name: fadeG;
+    -ms-animation-name: fadeG;
+    -webkit-animation-name: fadeG;
+    -moz-animation-name: fadeG;
+    animation-duration: 0.522s;
+    -o-animation-duration: 0.522s;
+    -ms-animation-duration: 0.522s;
+    -webkit-animation-duration: 0.522s;
+    -moz-animation-duration: 0.522s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
 }
 
-.meteor-table #rotateG_01{
-    left:0;
-    top:7px;
-    animation-delay:0.1995s;
-    -o-animation-delay:0.1995s;
-    -ms-animation-delay:0.1995s;
-    -webkit-animation-delay:0.1995s;
-    -moz-animation-delay:0.1995s;
-    transform:rotate(-90deg);
-    -o-transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-    -moz-transform:rotate(-90deg);
+.meteor-table #rotateG_01 {
+    left: 0;
+    top: 7px;
+    animation-delay: 0.1995s;
+    -o-animation-delay: 0.1995s;
+    -ms-animation-delay: 0.1995s;
+    -webkit-animation-delay: 0.1995s;
+    -moz-animation-delay: 0.1995s;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
 }
 
-.meteor-table #rotateG_02{
-    left:2px;
-    top:2px;
-    animation-delay:0.256s;
-    -o-animation-delay:0.256s;
-    -ms-animation-delay:0.256s;
-    -webkit-animation-delay:0.256s;
-    -moz-animation-delay:0.256s;
-    transform:rotate(-45deg);
-    -o-transform:rotate(-45deg);
-    -ms-transform:rotate(-45deg);
-    -webkit-transform:rotate(-45deg);
-    -moz-transform:rotate(-45deg);
+.meteor-table #rotateG_02 {
+    left: 2px;
+    top: 2px;
+    animation-delay: 0.256s;
+    -o-animation-delay: 0.256s;
+    -ms-animation-delay: 0.256s;
+    -webkit-animation-delay: 0.256s;
+    -moz-animation-delay: 0.256s;
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
 }
 
-.meteor-table #rotateG_03{
-    left:6px;
-    top:1px;
-    animation-delay:0.3225s;
-    -o-animation-delay:0.3225s;
-    -ms-animation-delay:0.3225s;
-    -webkit-animation-delay:0.3225s;
-    -moz-animation-delay:0.3225s;
-    transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    -ms-transform:rotate(0deg);
-    -webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
+.meteor-table #rotateG_03 {
+    left: 6px;
+    top: 1px;
+    animation-delay: 0.3225s;
+    -o-animation-delay: 0.3225s;
+    -ms-animation-delay: 0.3225s;
+    -webkit-animation-delay: 0.3225s;
+    -moz-animation-delay: 0.3225s;
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
 }
 
-.meteor-table #rotateG_04{
-    right:2px;
-    top:2px;
-    animation-delay:0.389s;
-    -o-animation-delay:0.389s;
-    -ms-animation-delay:0.389s;
-    -webkit-animation-delay:0.389s;
-    -moz-animation-delay:0.389s;
-    transform:rotate(45deg);
-    -o-transform:rotate(45deg);
-    -ms-transform:rotate(45deg);
-    -webkit-transform:rotate(45deg);
-    -moz-transform:rotate(45deg);
+.meteor-table #rotateG_04 {
+    right: 2px;
+    top: 2px;
+    animation-delay: 0.389s;
+    -o-animation-delay: 0.389s;
+    -ms-animation-delay: 0.389s;
+    -webkit-animation-delay: 0.389s;
+    -moz-animation-delay: 0.389s;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
 }
 
-.meteor-table #rotateG_05{
-    right:0;
-    top:7px;
-    animation-delay:0.4555s;
-    -o-animation-delay:0.4555s;
-    -ms-animation-delay:0.4555s;
-    -webkit-animation-delay:0.4555s;
-    -moz-animation-delay:0.4555s;
-    transform:rotate(90deg);
-    -o-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
+.meteor-table #rotateG_05 {
+    right: 0;
+    top: 7px;
+    animation-delay: 0.4555s;
+    -o-animation-delay: 0.4555s;
+    -ms-animation-delay: 0.4555s;
+    -webkit-animation-delay: 0.4555s;
+    -moz-animation-delay: 0.4555s;
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
 }
 
-.meteor-table #rotateG_06{
-    right:2px;
-    bottom:2px;
-    animation-delay:0.522s;
-    -o-animation-delay:0.522s;
-    -ms-animation-delay:0.522s;
-    -webkit-animation-delay:0.522s;
-    -moz-animation-delay:0.522s;
-    transform:rotate(135deg);
-    -o-transform:rotate(135deg);
-    -ms-transform:rotate(135deg);
-    -webkit-transform:rotate(135deg);
-    -moz-transform:rotate(135deg);
+.meteor-table #rotateG_06 {
+    right: 2px;
+    bottom: 2px;
+    animation-delay: 0.522s;
+    -o-animation-delay: 0.522s;
+    -ms-animation-delay: 0.522s;
+    -webkit-animation-delay: 0.522s;
+    -moz-animation-delay: 0.522s;
+    transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
 }
 
-.meteor-table #rotateG_07{
-    bottom:0;
-    left:6px;
-    animation-delay:0.5885s;
-    -o-animation-delay:0.5885s;
-    -ms-animation-delay:0.5885s;
-    -webkit-animation-delay:0.5885s;
-    -moz-animation-delay:0.5885s;
-    transform:rotate(180deg);
-    -o-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-    -moz-transform:rotate(180deg);
+.meteor-table #rotateG_07 {
+    bottom: 0;
+    left: 6px;
+    animation-delay: 0.5885s;
+    -o-animation-delay: 0.5885s;
+    -ms-animation-delay: 0.5885s;
+    -webkit-animation-delay: 0.5885s;
+    -moz-animation-delay: 0.5885s;
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
 }
 
-.meteor-table #rotateG_08{
-    left:2px;
-    bottom:2px;
-    animation-delay:0.645s;
-    -o-animation-delay:0.645s;
-    -ms-animation-delay:0.645s;
-    -webkit-animation-delay:0.645s;
-    -moz-animation-delay:0.645s;
-    transform:rotate(-135deg);
-    -o-transform:rotate(-135deg);
-    -ms-transform:rotate(-135deg);
-    -webkit-transform:rotate(-135deg);
-    -moz-transform:rotate(-135deg);
+.meteor-table #rotateG_08 {
+    left: 2px;
+    bottom: 2px;
+    animation-delay: 0.645s;
+    -o-animation-delay: 0.645s;
+    -ms-animation-delay: 0.645s;
+    -webkit-animation-delay: 0.645s;
+    -moz-animation-delay: 0.645s;
+    transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
 }
 
-
-
-@keyframes fadeG{
-    0%{
-        background-color:rgb(102,102,102);
+@keyframes fadeG {
+    0% {
+        background-color: rgb(102, 102, 102);
     }
 
-    100%{
-        background-color:rgb(255,255,255);
+    100% {
+        background-color: rgb(255, 255, 255);
     }
 }
 
-@-o-keyframes fadeG{
-    0%{
-        background-color:rgb(102,102,102);
+@-o-keyframes fadeG {
+    0% {
+        background-color: rgb(102, 102, 102);
     }
 
-    100%{
-        background-color:rgb(255,255,255);
-    }
-}
-
-@-ms-keyframes fadeG{
-    0%{
-        background-color:rgb(102,102,102);
-    }
-
-    100%{
-        background-color:rgb(255,255,255);
+    100% {
+        background-color: rgb(255, 255, 255);
     }
 }
 
-@-webkit-keyframes fadeG{
-    0%{
-        background-color:rgb(102,102,102);
+@-ms-keyframes fadeG {
+    0% {
+        background-color: rgb(102, 102, 102);
     }
 
-    100%{
-        background-color:rgb(255,255,255);
-    }
-}
-
-@-moz-keyframes fadeG{
-    0%{
-        background-color:rgb(102,102,102);
-    }
-
-    100%{
-        background-color:rgb(255,255,255);
+    100% {
+        background-color: rgb(255, 255, 255);
     }
 }
 
+@-webkit-keyframes fadeG {
+    0% {
+        background-color: rgb(102, 102, 102);
+    }
 
-.meteor-table .cssload-container{
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@-moz-keyframes fadeG {
+    0% {
+        background-color: rgb(102, 102, 102);
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.meteor-table .cssload-container {
     display: block;
-    margin:150px auto 150px;
-    width:100px;
+    margin: 150px auto 150px;
+    width: 100px;
 }
 
-.meteor-table .cssload-loading i{
+.meteor-table .cssload-loading i {
     width: 20px;
     height: 20px;
     display: inline-block;
     border-radius: 50%;
-    background: rgb(112,112,112);
+    background: rgb(112, 112, 112);
 }
-.meteor-table .cssload-loading i:first-child{
+
+.meteor-table .cssload-loading i:first-child {
     opacity: 0;
-    animation:cssload-loading-ani2 0.475s linear infinite;
-    -o-animation:cssload-loading-ani2 0.475s linear infinite;
-    -ms-animation:cssload-loading-ani2 0.475s linear infinite;
-    -webkit-animation:cssload-loading-ani2 0.475s linear infinite;
-    -moz-animation:cssload-loading-ani2 0.475s linear infinite;
-    transform:translate(-20px);
-    -o-transform:translate(-20px);
-    -ms-transform:translate(-20px);
-    -webkit-transform:translate(-20px);
-    -moz-transform:translate(-20px);
+    animation: cssload-loading-ani2 0.475s linear infinite;
+    -o-animation: cssload-loading-ani2 0.475s linear infinite;
+    -ms-animation: cssload-loading-ani2 0.475s linear infinite;
+    -webkit-animation: cssload-loading-ani2 0.475s linear infinite;
+    -moz-animation: cssload-loading-ani2 0.475s linear infinite;
+    transform: translate(-20px);
+    -o-transform: translate(-20px);
+    -ms-transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
 }
+
 .meteor-table .cssload-loading i:nth-child(2),
-.meteor-table .cssload-loading i:nth-child(3){
-    animation:cssload-loading-ani3 0.475s linear infinite;
-    -o-animation:cssload-loading-ani3 0.475s linear infinite;
-    -ms-animation:cssload-loading-ani3 0.475s linear infinite;
-    -webkit-animation:cssload-loading-ani3 0.475s linear infinite;
-    -moz-animation:cssload-loading-ani3 0.475s linear infinite;
-}
-.meteor-table .cssload-loading i:last-child{
-    animation:cssload-loading-ani1 0.475s linear infinite;
-    -o-animation:cssload-loading-ani1 0.475s linear infinite;
-    -ms-animation:cssload-loading-ani1 0.475s linear infinite;
-    -webkit-animation:cssload-loading-ani1 0.475s linear infinite;
-    -moz-animation:cssload-loading-ani1 0.475s linear infinite;
+.meteor-table .cssload-loading i:nth-child(3) {
+    animation: cssload-loading-ani3 0.475s linear infinite;
+    -o-animation: cssload-loading-ani3 0.475s linear infinite;
+    -ms-animation: cssload-loading-ani3 0.475s linear infinite;
+    -webkit-animation: cssload-loading-ani3 0.475s linear infinite;
+    -moz-animation: cssload-loading-ani3 0.475s linear infinite;
 }
 
+.meteor-table .cssload-loading i:last-child {
+    animation: cssload-loading-ani1 0.475s linear infinite;
+    -o-animation: cssload-loading-ani1 0.475s linear infinite;
+    -ms-animation: cssload-loading-ani1 0.475s linear infinite;
+    -webkit-animation: cssload-loading-ani1 0.475s linear infinite;
+    -moz-animation: cssload-loading-ani1 0.475s linear infinite;
+}
 
-
-
-@keyframes cssload-loading-ani1{
-    100%{
-        transform:translate(40px);
+@keyframes cssload-loading-ani1 {
+    100% {
+        transform: translate(40px);
         opacity: 0;
     }
 }
 
-@-o-keyframes cssload-loading-ani1{
-    100%{
-        -o-transform:translate(40px);
+@-o-keyframes cssload-loading-ani1 {
+    100% {
+        -o-transform: translate(40px);
         opacity: 0;
     }
 }
 
-@-ms-keyframes cssload-loading-ani1{
-    100%{
-        -ms-transform:translate(40px);
+@-ms-keyframes cssload-loading-ani1 {
+    100% {
+        -ms-transform: translate(40px);
         opacity: 0;
     }
 }
 
-@-webkit-keyframes cssload-loading-ani1{
-    100%{
-        -webkit-transform:translate(40px);
+@-webkit-keyframes cssload-loading-ani1 {
+    100% {
+        -webkit-transform: translate(40px);
         opacity: 0;
     }
 }
 
-@-moz-keyframes cssload-loading-ani1{
-    100%{
-        -moz-transform:translate(40px);
+@-moz-keyframes cssload-loading-ani1 {
+    100% {
+        -moz-transform: translate(40px);
         opacity: 0;
     }
 }
 
-@keyframes cssload-loading-ani2{
-    100%{
-        transform:translate(20px);
+@keyframes cssload-loading-ani2 {
+    100% {
+        transform: translate(20px);
         opacity: 1;
     }
 }
 
-@-o-keyframes cssload-loading-ani2{
-    100%{
-        -o-transform:translate(20px);
+@-o-keyframes cssload-loading-ani2 {
+    100% {
+        -o-transform: translate(20px);
         opacity: 1;
     }
 }
 
-@-ms-keyframes cssload-loading-ani2{
-    100%{
-        -ms-transform:translate(20px);
+@-ms-keyframes cssload-loading-ani2 {
+    100% {
+        -ms-transform: translate(20px);
         opacity: 1;
     }
 }
 
-@-webkit-keyframes cssload-loading-ani2{
-    100%{
-        -webkit-transform:translate(20px);
+@-webkit-keyframes cssload-loading-ani2 {
+    100% {
+        -webkit-transform: translate(20px);
         opacity: 1;
     }
 }
 
-@-moz-keyframes cssload-loading-ani2{
-    100%{
-        -moz-transform:translate(20px);
+@-moz-keyframes cssload-loading-ani2 {
+    100% {
+        -moz-transform: translate(20px);
         opacity: 1;
     }
 }
 
-@keyframes cssload-loading-ani3{
-    100%{
-        transform:translate(20px);
+@keyframes cssload-loading-ani3 {
+    100% {
+        transform: translate(20px);
     }
 }
 
-@-o-keyframes cssload-loading-ani3{
-    100%{
-        -o-transform:translate(20px);
+@-o-keyframes cssload-loading-ani3 {
+    100% {
+        -o-transform: translate(20px);
     }
 }
 
-@-ms-keyframes cssload-loading-ani3{
-    100%{
-        -ms-transform:translate(20px);
+@-ms-keyframes cssload-loading-ani3 {
+    100% {
+        -ms-transform: translate(20px);
     }
 }
 
-@-webkit-keyframes cssload-loading-ani3{
-    100%{
-        -webkit-transform:translate(20px);
+@-webkit-keyframes cssload-loading-ani3 {
+    100% {
+        -webkit-transform: translate(20px);
     }
 }
 
-@-moz-keyframes cssload-loading-ani3{
-    100%{
-        -moz-transform:translate(20px);
+@-moz-keyframes cssload-loading-ani3 {
+    100% {
+        -moz-transform: translate(20px);
     }
 }
 
@@ -488,6 +507,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -498,16 +518,19 @@
     width: 100%;
     margin-bottom: 1.5em;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table {
         font-size: .9em;
     }
 }
+
 @media (min-width: 62em) {
     .meteor-table .responsive-table {
         font-size: 1em;
     }
 }
+
 .meteor-table .responsive-table thead {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
@@ -519,6 +542,7 @@
     width: 1px;
     overflow: hidden;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table thead {
         position: relative;
@@ -528,6 +552,7 @@
         overflow: auto;
     }
 }
+
 .meteor-table .responsive-table thead th {
     /*background-color: #1d96b2;*/
     /*border: 1px solid #1d96b2;*/
@@ -535,6 +560,7 @@
     text-align: center;
     /*color: white;*/
 }
+
 /*.meteor-table .responsive-table thead th:first-of-type {*/
 /*text-align: left;*/
 /*}*/
@@ -547,22 +573,26 @@
     text-align: left;
     white-space: normal;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tr {
         display: table-row;
     }
 }
+
 .meteor-table .responsive-table th,
 .meteor-table .responsive-table td {
     padding: .5em;
     vertical-align: middle;
 }
+
 @media (min-width: 30em) {
     .meteor-table .responsive-table th,
     .meteor-table .responsive-table td {
         padding: .75em .5em;
     }
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table th,
     .meteor-table .responsive-table td {
@@ -570,65 +600,78 @@
         padding: .5em;
     }
 }
+
 @media (min-width: 62em) {
     .meteor-table .responsive-table th,
     .meteor-table .responsive-table td {
         padding: .75em .5em;
     }
 }
+
 @media (min-width: 75em) {
     .meteor-table .responsive-table th,
     .meteor-table .responsive-table td {
         padding: .75em;
     }
 }
+
 .meteor-table .responsive-table caption {
     margin-bottom: 1em;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table caption {
         font-size: 1.5em;
     }
 }
+
 .meteor-table .responsive-table tfoot {
     font-size: .8em;
     font-style: italic;
 }
+
 @media (min-width: 62em) {
     .meteor-table .responsive-table tfoot {
         font-size: .9em;
     }
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody {
         display: table-row-group;
     }
 }
+
 .meteor-table .responsive-table tbody tr {
     margin-bottom: 1em;
     border-top: 1px solid #cccccc;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody tr {
         display: table-row;
         border: none;
     }
 }
+
 .meteor-table .responsive-table tbody tr:last-of-type {
     margin-bottom: 0;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody tr:nth-of-type(even) {
         /*background-color: rgba(94, 93, 82, 0.1);*/
     }
 }
+
 .meteor-table .responsive-table tbody th[scope="row"] {
     /*background-color: #1d96b2;*/
     color: white;
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody th[scope="row"] {
         background-color: transparent;
@@ -636,37 +679,332 @@
         text-align: left;
     }
 }
+
 .meteor-table .responsive-table tbody td {
     text-align: right;
 }
+
 @media (min-width: 30em) {
     .meteor-table .responsive-table tbody td {
         /*border-bottom: 1px solid #1d96b2;*/
     }
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody td {
         text-align: center;
     }
 }
+
 .meteor-table .responsive-table tbody td[data-type=currency] {
     text-align: right;
 }
+
 .meteor-table .responsive-table tbody td[data-title]:before {
     content: attr(data-title);
     float: left;
     font-size: .8em;
     /*color: rgba(94, 93, 82, 0.75);*/
 }
+
 @media (min-width: 30em) {
     .meteor-table .responsive-table tbody td[data-title]:before {
         font-size: .9em;
     }
 }
+
 @media (min-width: 48em) {
     .meteor-table .responsive-table tbody td[data-title]:before {
         content: none;
     }
+}
+
+.meteor-table .checkbox {
+    padding-left: 20px;
+}
+
+.meteor-table .checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+
+.meteor-table .checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.meteor-table .checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+}
+
+.meteor-table .checkbox input[type="checkbox"],
+.meteor-table .checkbox input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+.meteor-table .checkbox input[type="checkbox"]:focus + label::before,
+.meteor-table .checkbox input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.meteor-table .checkbox input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox input[type="radio"]:checked + label::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+}
+
+.meteor-table .checkbox input[type="checkbox"]:disabled + label,
+.meteor-table .checkbox input[type="radio"]:disabled + label {
+    opacity: 0.65;
+}
+
+.meteor-table .checkbox input[type="checkbox"]:disabled + label::before,
+.meteor-table .checkbox input[type="radio"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+
+.checkbox.meteor-table .checkbox-circle label::before {
+    border-radius: 50%;
+}
+
+.meteor-table .checkbox.checkbox-inline {
+    margin-top: 0;
+}
+
+.meteor-table .checkbox-primary input[type="checkbox"]:checked + label::before,
+.meteor-table .checkbox-primary input[type="radio"]:checked + label::before {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.meteor-table .checkbox-primary input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox-primary input[type="radio"]:checked + label::after {
+    color: #fff;
+}
+
+.meteor-table .checkbox-danger input[type="checkbox"]:checked + label::before,
+.meteor-table .checkbox-danger input[type="radio"]:checked + label::before {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+
+.meteor-table .checkbox-danger input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox-danger input[type="radio"]:checked + label::after {
+    color: #fff;
+}
+
+.meteor-table .checkbox-info input[type="checkbox"]:checked + label::before,
+.meteor-table .checkbox-info input[type="radio"]:checked + label::before {
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+
+.meteor-table .checkbox-info input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox-info input[type="radio"]:checked + label::after {
+    color: #fff;
+}
+
+.meteor-table .checkbox-warning input[type="checkbox"]:checked + label::before,
+.meteor-table .checkbox-warning input[type="radio"]:checked + label::before {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+.meteor-table .checkbox-warning input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox-warning input[type="radio"]:checked + label::after {
+    color: #fff;
+}
+
+.meteor-table .checkbox-success input[type="checkbox"]:checked + label::before,
+.meteor-table .checkbox-success input[type="radio"]:checked + label::before {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+
+.meteor-table .checkbox-success input[type="checkbox"]:checked + label::after,
+.meteor-table .checkbox-success input[type="radio"]:checked + label::after {
+    color: #fff;
+}
+
+.meteor-table .radio {
+    padding-left: 20px;
+}
+
+.meteor-table .radio label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+
+.meteor-table .radio label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out;
+}
+
+.meteor-table .radio label::after {
+    display: inline-block;
+    position: absolute;
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    top: 3px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #555555;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+
+.meteor-table .radio input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+.meteor-table .radio input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.meteor-table .radio input[type="radio"]:checked + label::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.meteor-table .radio input[type="radio"]:disabled + label {
+    opacity: 0.65;
+}
+
+.meteor-table .radio input[type="radio"]:disabled + label::before {
+    cursor: not-allowed;
+}
+
+.meteor-table .radio.radio-inline {
+    margin-top: 0;
+}
+
+.meteor-table .radio-primary input[type="radio"] + label::after {
+    background-color: #337ab7;
+}
+
+.meteor-table .radio-primary input[type="radio"]:checked + label::before {
+    border-color: #337ab7;
+}
+
+.meteor-table .radio-primary input[type="radio"]:checked + label::after {
+    background-color: #337ab7;
+}
+
+.meteor-table .radio-danger input[type="radio"] + label::after {
+    background-color: #d9534f;
+}
+
+.meteor-table .radio-danger input[type="radio"]:checked + label::before {
+    border-color: #d9534f;
+}
+
+.meteor-table .radio-danger input[type="radio"]:checked + label::after {
+    background-color: #d9534f;
+}
+
+.meteor-table .radio-info input[type="radio"] + label::after {
+    background-color: #5bc0de;
+}
+
+.meteor-table .radio-info input[type="radio"]:checked + label::before {
+    border-color: #5bc0de;
+}
+
+.meteor-table .radio-info input[type="radio"]:checked + label::after {
+    background-color: #5bc0de;
+}
+
+.meteor-table .radio-warning input[type="radio"] + label::after {
+    background-color: #f0ad4e;
+}
+
+.meteor-table .radio-warning input[type="radio"]:checked + label::before {
+    border-color: #f0ad4e;
+}
+
+.meteor-table .radio-warning input[type="radio"]:checked + label::after {
+    background-color: #f0ad4e;
+}
+
+.meteor-table .radio-success input[type="radio"] + label::after {
+    background-color: #5cb85c;
+}
+
+.meteor-table .radio-success input[type="radio"]:checked + label::before {
+    border-color: #5cb85c;
+}
+
+.meteor-table .radio-success input[type="radio"]:checked + label::after {
+    background-color: #5cb85c;
+}
+
+.meteor-table input[type="checkbox"].styled:checked + label:after,
+.meteor-table input[type="radio"].styled:checked + label:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+}
+
+.meteor-table input[type="checkbox"].styled:checked + label::before,
+.meteor-table input[type="radio"].styled:checked + label::before {
+    color: #fff;
+}
+
+.meteor-table input[type="checkbox"].styled:checked + label::after,
+.meteor-table input[type="radio"].styled:checked + label::after {
+    color: #fff;
 }
 
 
