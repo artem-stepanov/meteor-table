@@ -1,6 +1,6 @@
 Package.describe({
   name: 'akora:meteor-table',
-  version: '0.1.6',
+  version: '0.1.7',
   summary: 'A rich reactive table for Meteor',
   git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
