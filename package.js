@@ -1,6 +1,6 @@
 Package.describe({
   name: 'akora:meteor-table',
-  version: '0.1.7',
+  version: '0.1.8',
   summary: 'A rich reactive table for Meteor',
   git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
@@ -35,8 +35,6 @@ Package.onUse(function(api) {
   api.addFiles('lib/MeteorTableServer.js', 'server');
 
   api.export('MeteorTable', ['client', 'server']);
-  api.export('MeteorTableField', ['client', 'server']);
-  api.export('MeteorTableParams', ['client', 'server']);
 });
 
 //Package.onTest(function(api) {
