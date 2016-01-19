@@ -141,6 +141,26 @@
 
         </div>
 
+        {{#if getButtons}}
+        <div class="row buttons" style="margin-bottom: 1em;">
+
+            <div class="col-sm-offset-2">
+                <div class="row" style="padding-left: 1em;">
+
+                    {{#each getButtons}}
+                    <div class="col-sm-1">
+                        <button class="{{btnClass}}{{#unless btnClass}}btn btn-default{{/unless}}"
+                                data-func-name="{{name}}">
+                            {{title}}
+                        </button>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+
+        </div>
+        {{/if}}
 
         {{#if firstLoading}}
 
@@ -218,6 +238,7 @@
 
             </div>
         </div>
+
         <div class="row">
 
             {{#unless totalCountRows}}
@@ -297,11 +318,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2" style="padding-top: 7px;">
-                       {{getLabel "totalChecked"}}: <strong>{{ getCountCheckboxesChecked }}</strong>
+                        {{getLabel "totalChecked"}}: <strong>{{ getCountCheckboxesChecked }}</strong>
                     </div>
                     {{#each getCheckboxes}}
                     <div class="col-sm-1">
-                        <button class="{{btnClass}}{{#unless btnClass}}btn btn-default{{/unless}}" data-func-name="{{name}}">
+                        <button class="{{btnClass}}{{#unless btnClass}}btn btn-default{{/unless}}"
+                                data-func-name="{{name}}">
                             {{title}}
                         </button>
                     </div>
