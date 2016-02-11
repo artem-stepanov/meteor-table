@@ -141,6 +141,14 @@
 
         </div>
 
+        {{#if firstLoading}}
+
+        <div class="cssload-container">
+            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+        </div>
+
+        {{else}}
+
         {{#if getButtons}}
         <div class="row buttons" style="margin-bottom: 1em;">
 
@@ -161,15 +169,6 @@
 
         </div>
         {{/if}}
-
-        {{#if firstLoading}}
-
-        <div class="cssload-container">
-            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
-        </div>
-
-        {{else}}
-
 
         <div class="row meteor-table-table">
             <div class="col-sm-12">
