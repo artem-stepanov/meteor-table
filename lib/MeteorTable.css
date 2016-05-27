@@ -39,6 +39,7 @@
     text-decoration: none;
     cursor: pointer;
     margin-left: 1em;
+    font-size: 0.8em;
 }
 
 .meteor-table .display-none-important {
