@@ -33,6 +33,14 @@
     display: none;
 }
 
+.meteor-table .link-reset {
+    border-bottom: 1px dashed;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
 .meteor-table .display-none-important {
     display: none !important;
 }
