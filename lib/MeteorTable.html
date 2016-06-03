@@ -70,11 +70,13 @@
                 </div>
 
                 {{#unless noExcel}}
+                {{#unless isCordova}}
                 <div class="col-xs-12 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
                     <button class="btn btn-success excel-download"><i
                             class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
                     </button>
                 </div>
+                {{/unless}}
                 {{/unless}}
 
                 <div class="mobile-sort">
