@@ -42,6 +42,28 @@
     font-size: 0.8em;
 }
 
+.meteor-table .hide-filters {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.meteor-table .hide-filters span.text {
+    border-bottom: 1px dashed;
+    margin-left: 0.3em;
+}
+
+.meteor-table .filters-show {
+    display: block;
+}
+
+.meteor-table .filters-hide {
+    display: none;
+}
+
 .meteor-table .display-none-important {
     display: none !important;
 }

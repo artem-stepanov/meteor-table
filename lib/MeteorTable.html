@@ -4,7 +4,7 @@
 
         <div class="columns-settings" style="margin-bottom: 1em;{{#if firstLoading}}display: none;{{/if}}">
 
-            <div class="row">
+            <div class="row filters-hide">
                 <div class="col-md-6">
 
                     <form class="form-horizontal meteor-table-filters" onsubmit="return false;">
@@ -15,7 +15,15 @@
                             <label for="{{ name }}" class="col-sm-4 control-label">{{ title }}</label>
 
                             <div class="col-sm-8">
-                                {{ getInput }}
+
+                                {{#if isInputTpl}}
+                                {{#with ..}}
+                                {{> Template.dynamic template=../tplInput}}
+                                {{/with}}
+                                {{else}}
+                                {{getInput}}
+                                {{/if}}
+
                             </div>
                         </div>
                         {{/each}}
@@ -27,7 +35,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 filters-hide">
 
                     <form class="form-horizontal meteor-table-filters" onsubmit="return false;">
 
@@ -60,6 +68,21 @@
                         {{/if}}
 
                     </form>
+
+                </div>
+
+                <div class="col-md-6 filters-show">
+
+                    <a class="hide-filters">
+                        <span class="icon">
+                            {{#if isFullFilters}}
+                                <i class="fa fa-toggle-on" style="color: #00a800;" aria-hidden="true"></i>
+                            {{else}}
+                                <i class="fa fa-toggle-off" style="color: #777777;" aria-hidden="true"></i>
+                            {{/if}}
+                        </span>
+                        <span class="text">{{getLabel "filters"}}</span>
+                    </a>
 
                 </div>
 
@@ -155,8 +178,8 @@
         {{#if getButtons}}
         <div class="row buttons" style="margin-bottom: 1em;">
 
-            <div class="col-sm-offset-2">
-                <div class="row" style="padding-left: 1em;">
+            <div class="col-sm-12">
+                <div class="row">
 
                     {{#each getButtons}}
                     <div class="col-sm-1">
