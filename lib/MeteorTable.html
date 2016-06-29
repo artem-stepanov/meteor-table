@@ -103,6 +103,7 @@
                 {{/unless}}
                 {{/unless}}
 
+                {{#unless isNoResponsiveTable}}
                 <div class="mobile-sort">
                     <div class="col-xs-8 col-md-1">
 
@@ -130,6 +131,8 @@
 
                     </div>
                 </div>
+                {{/unless}}
+
                 <div class="col-xs-3 col-sm-2 col-md-1">
                     <span class="btn btn-default hidden-column-button"
                           data-toggle="popover">{{getLabel "columns"}}</span>
@@ -205,7 +208,7 @@
                 <div class="loading-opacity {{#if tableReady}}display-none{{/if}}"></div>
 
                 {{#if totalCountRows}}
-                <table class="table table-striped table-hover responsive-table">
+                <table class="table table-striped table-hover {{#unless isNoResponsiveTable}}responsive-table{{/unless}}">
                     <thead>
                     <tr>
                         {{#if getCheckboxes}}
