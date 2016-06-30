@@ -1,6 +1,6 @@
 Package.describe({
   name: 'akora:meteor-table',
-  version: '0.2.6',
+  version: '0.2.7',
   summary: 'A rich reactive table for Meteor',
   git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
@@ -21,7 +21,7 @@ Package.onUse(function(api) {
   api.use("netanelgilad:excel@0.2.4", "server");
   api.use("netanelgilad:node-uuid@1.0.2", "server");
   api.use("netanelgilad:mkdirp@0.0.1", "server");
-  api.use("vsivsi:file-collection@1.2.0", ["server", "client"]);
+  api.use("vsivsi:file-collection@1.3.0", ["server", "client"]);
   api.use("tmeasday:publish-counts@0.7.1", ["server", "client"]);
   api.use("natestrauser:select2@4.0.0", "client");
   api.use("rajit:bootstrap3-datepicker@1.4.1", "client");
