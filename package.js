@@ -37,8 +37,7 @@ Package.onUse(function(api) {
   api.export('MeteorTable', ['client', 'server']);
 });
 
-//Package.onTest(function(api) {
-//  api.use('tinytest');
-//  api.use('akora:meteor-table');
-//  api.addFiles('meteor-table-tests.js');
-//});
+Cordova.depends({
+  "cordova-plugin-datepicker": "0.9.2",
+  "cordova-plugin-keyboard": "1.1.4"
+});
