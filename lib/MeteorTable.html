@@ -94,17 +94,28 @@
                 </div>
 
                 {{#unless noExcel}}
-                <div class="col-xs-12 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
+                <div class="col-xs-6 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
                     <button class="btn btn-success excel-download"><i
                             class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
                     </button>
                 </div>
                 {{/unless}}
 
-                {{#unless isNoResponsiveTable}}
+                <div class="col-xs-3 col-xs-offset-2 mobile-sort">
+                    <div class="btn-group" role="group" aria-label="">
+                        <button type="button"
+                                class="btn {{#if isNoResponsiveTable}}btn-default{{else}}btn-primary{{/if}} btn-group-sm setResponsiveTable">
+                            <i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                        <button type="button"
+                                class="btn {{#if isNoResponsiveTable}}btn-primary{{else}}btn-default{{/if}} btn-group-sm setNoResponsiveTable">
+                            <i class="fa fa-th" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
                 <div class="mobile-sort">
                     <div class="col-xs-8 col-md-1">
 
+                        {{#unless isNoResponsiveTable}}
                         <ul class="nav nav-pills">
                             {{#if getSortOrder}}
                             <li class="change-sort-order"><a class="disable" href="#">
@@ -127,9 +138,9 @@
                             </li>
                         </ul>
 
+                        {{/unless}}
                     </div>
                 </div>
-                {{/unless}}
 
                 <div class="col-xs-3 col-sm-2 col-md-1">
                     <span class="btn btn-default hidden-column-button"
@@ -150,6 +161,7 @@
                             {{/each}}
                         </ul>
                     </div>
+
                 </div>
                 {{/if}}
 
