@@ -162,6 +162,30 @@
     padding-bottom: 55px;
 }
 
+.meteor-table .responsive-table-settings-buttons {
+    text-align: right;
+    font-size: 0.7em;
+    /*padding-right: 0;*/
+    padding-bottom: 15px;
+}
+
+.meteor-table .column-settings {
+    text-align: right;
+}
+
+@media (max-width: 48em) {
+    .meteor-table .column-settings {
+        padding: 0;
+    }
+    .meteor-table .change-sort-order {
+        font-size: 0.8em !important;
+    }
+    .meteor-table .sort-settings {
+        /*padding-right: 0;*/
+        padding: 0;
+    }
+}
+
 .navbar-checkboxes-buttons {
     background-color: #f0f0f0 !important;
     color: black !important;
