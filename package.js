@@ -1,6 +1,6 @@
 Package.describe({
   name: 'akora:meteor-table',
-  version: '0.2.19',
+  version: '0.2.20',
   summary: 'A rich reactive table for Meteor',
   git: 'https://github.com/artem-stepanov/meteor-table.git',
   documentation: 'README.md'
@@ -9,6 +9,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use('templating', 'client');
+  api.use('check', ["server", "client"]);
   api.use('jquery', 'client');
   api.use('underscore', 'client');
   api.use('spacebars', 'client');
