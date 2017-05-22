@@ -132,6 +132,10 @@
     display: none;
 }
 
+.meteor-table .change-sort-order a:hover, .meteor-table .change-sort-order a:focus {
+    background: none;
+}
+
 @media (min-width: 48em) {
     .meteor-table .unless-mobile-sort {
         display: block;
