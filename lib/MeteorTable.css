@@ -173,13 +173,23 @@
     text-align: right;
 }
 
+.meteor-table .column-settings .btn {
+    font-size: 12px !important;
+}
+
+.meteor-table .floating-bars-sort {
+    text-align: right;
+}
+
 @media (max-width: 48em) {
     .meteor-table .column-settings {
-        padding: 0;
+        /*padding: 0;*/
     }
+
     .meteor-table .change-sort-order {
         font-size: 0.8em !important;
     }
+
     .meteor-table .sort-settings {
         /*padding-right: 0;*/
         padding: 0;

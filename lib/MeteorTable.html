@@ -58,7 +58,7 @@
 
                 </div>
 
-                <div class="col-md-6 filters-show">
+                <div class="col-sm-6 filters-show">
 
                     {{#if issetFilters}}
                     <a class="hide-filters">
@@ -90,11 +90,11 @@
                 {{#if getColumns}}
 
                 <div class="unless-mobile-sort">
-                    <div class="col-md-1"></div>
+                    <div class="col-sm-1"></div>
                 </div>
 
                     {{#unless noExcel}}
-                    <div class="col-xs-6 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-1 excel-link">
+                    <div class="col-xs-6 col-sm-2 col-sm-offset-1 excel-link">
                         <button class="btn btn-success btn-sm excel-download"><i
                                 class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
                         </button>
@@ -113,7 +113,7 @@
                     </div>
 
                 <div class="mobile-sort">
-                    <div class="col-xs-6 col-md-1 sort-settings">
+                    <div class="col-xs-8 col-sm-1 sort-settings">
 
                         {{#unless isNoResponsiveTable}}
                         <ul class="nav nav-pills">
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-4 col-sm-2 col-md-1 column-settings">
+                <div class="col-xs-3 col-sm-1 column-settings">
                     <span class="btn btn-default hidden-column-button"
                           data-toggle="popover">{{getLabel "columns"}}</span>
 
@@ -179,7 +179,7 @@
                 {{/if}}
 
                 <div class="unless-mobile-sort">
-                    <div class="col-xs-1 col-sm-1">
+                    <div class="col-xs-1 col-sm-1 floating-bars-sort">
                         <div id="floatingBarsG"
                              style="{{#if hideLoading 'sort'}}visibility: hidden;{{/if}}margin: 7px 0 0 0;">
                             <div class="blockG" id="rotateG_01"></div>
