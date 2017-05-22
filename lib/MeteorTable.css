@@ -132,7 +132,7 @@
     display: none;
 }
 
-.meteor-table .change-sort-order a:hover, .meteor-table .change-sort-order a:focus {
+.meteor-table .sort-settings ul li a:hover, .meteor-table .sort-settings ul li a:focus {
     background: none;
 }
 
