@@ -159,6 +159,7 @@
 @media (min-width: 48em) {
     .meteor-table .excel-link {
         padding-bottom: 0;
+        text-align: right;
     }
 }
 
