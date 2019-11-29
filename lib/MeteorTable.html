@@ -12,8 +12,8 @@
                         {{#if issetFilters}}
                             {{#each getFilters }}
                                 <div class="form-group">
-                                    <label for="{{ name }}" class="col-sm-4 control-label">{{{ title }}}</label>
-
+                                    <label for="{{ name }}" class="col-sm-4 control-label {{#if
+                                            isFillFilter}}color-red{{/if}}">{{{ title }}}</label>
                                     <div class="col-sm-8">
 
                                         {{#if isInputTpl}}
@@ -83,58 +83,63 @@
 
                     {{#unless noExcel}}
                         <div class="col-xs-6 col-sm-2 col-sm-offset-2 excel-link">
-                            <button class="btn btn-success btn-sm excel-download"><i
-                                    class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
-                            </button>
+                            {{#if totalCountRows}}
+                                <button class="btn btn-success btn-sm excel-download"><i
+                                        class="fa fa-file-excel-o half-right-margin"></i> {{getLabel "excel"}}
+                                </button>
+                            {{/if}}
                         </div>
                     {{/unless}}
 
                     <div class="col-xs-5 col-xs-offset-1 mobile-sort responsive-table-settings-buttons">
-                        <div class="btn-group" role="group" aria-label="">
-                            <button type="button"
-                                    class="btn {{#if
-                                            isNoResponsiveTable}}btn-default{{else}}btn-primary{{/if}} btn-group-sm setResponsiveTable">
-                                <i class="fa fa-align-justify" aria-hidden="true"></i></button>
-                            <button type="button"
-                                    class="btn {{#if
-                                            isNoResponsiveTable}}btn-primary{{else}}btn-default{{/if}} btn-group-sm setNoResponsiveTable">
-                                <i class="fa fa-th" aria-hidden="true"></i></button>
-                        </div>
+                        {{#if totalCountRows}}
+                            <div class="btn-group" role="group" aria-label="">
+                                <button type="button"
+                                        class="btn {{#if
+                                                isNoResponsiveTable}}btn-default{{else}}btn-primary{{/if}} btn-group-sm setResponsiveTable">
+                                    <i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                                <button type="button"
+                                        class="btn {{#if
+                                                isNoResponsiveTable}}btn-primary{{else}}btn-default{{/if}} btn-group-sm setNoResponsiveTable">
+                                    <i class="fa fa-th" aria-hidden="true"></i></button>
+                            </div>
+                        {{/if}}
                     </div>
 
                     <div class="mobile-sort">
                         <div class="col-xs-7 col-sm-1 sort-settings">
-
-                            {{#unless isNoResponsiveTable}}
-                                <ul class="nav nav-pills">
-                                    {{#if getSortOrder}}
-                                        <li class="change-sort-order"><a class="disable" href="#">
-                                            {{ getSort }}
-                                            <i class="fa {{getSortOrder}}"></i>
-                                        </a></li>
-                                    {{/if}}
-
-                                    <li role="presentation" class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                           aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li data-column-name=""><a href="#">&mdash;</a></li>
-                                            {{#each getColumns}}
-                                                <li data-column-name="{{name}}"><a href="#">{{getTitle}}</a></li>
-                                            {{/each}}
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                            {{/unless}}
+                            {{#if totalCountRows}}
+                                {{#unless isNoResponsiveTable}}
+                                    <ul class="nav nav-pills">
+                                        {{#if getSortOrder}}
+                                            <li class="change-sort-order"><a class="disable" href="#">
+                                                {{ getSort }}
+                                                <i class="fa {{getSortOrder}}"></i>
+                                            </a></li>
+                                        {{/if}}
+                                        <li role="presentation" class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                               aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-cog"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li data-column-name=""><a href="#">&mdash;</a></li>
+                                                {{#each getColumns}}
+                                                    <li data-column-name="{{name}}"><a href="#">{{getTitle}}</a></li>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                {{/unless}}
+                            {{/if}}
                         </div>
                     </div>
 
                     <div class="col-xs-5 col-sm-1 column-settings">
-                    <span class="btn btn-default hidden-column-button"
-                          data-toggle="popover">{{getLabel "columns"}}</span>
+
+                        <span class="btn btn-default hidden-column-button"
+                              style="{{#unless totalCountRows}}display: none;{{/unless}}"
+                              data-toggle="popover">{{getLabel "columns"}}</span>
 
                         <div style="display: none;" class="hidden-column-body">
                             <ul class="list-columns">
@@ -151,7 +156,6 @@
                                 {{/each}}
                             </ul>
                         </div>
-
                     </div>
                 {{/if}}
             </div>
@@ -237,7 +241,7 @@
 
                                     {{#each getColumns}}
                                         {{#if isShownColumn}}
-                                            <td data-title="{{getTitle}}">
+                                            <td data-title="{{getTitle}}" class="{{#if isNoDblClick}}no-dblclick{{/if}}">
                                                 {{#if isViewTpl}}
                                                     {{#with ..}}
                                                         {{> Template.dynamic template=../tplView}}
@@ -261,7 +265,11 @@
 
                 {{#unless totalCountRows}}
                     <div class="col-md-12 tableDataCount" style="text-align: center; font-weight: bold;">
-                        {{getLabel "empty"}}
+                        {{#if emptyFilters}}
+                            {{getLabel "fillFilters"}}
+                        {{else}}
+                            {{getLabel "empty"}}
+                        {{/if}}
                     </div>
                 {{/unless}}
 

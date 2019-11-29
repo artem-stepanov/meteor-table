@@ -10,7 +10,7 @@
     padding-top: 2px;
 }
 
-.meteor-table .meteor-table-table table tbody td,
+.meteor-table .meteor-table-table table tbody td:not(.no-dblclick),
 .meteor-table .meteor-table-table table thead th:not(.no-sort) {
     cursor: pointer;
 }
@@ -1075,6 +1075,10 @@
 .meteor-table input[type="checkbox"].styled:checked + label::after,
 .meteor-table input[type="radio"].styled:checked + label::after {
     color: #fff;
+}
+
+.meteor-table .color-red {
+    color: darkred;
 }
 
 
